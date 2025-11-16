@@ -52,9 +52,9 @@ android {
     signingConfigs {
        release {
            keyAlias 'upload'
-           keyPassword '770now'
+           keyPassword '7.....'
            storeFile file('../../play/upload-keystore.jks')
-           storePassword '770now'
+           storePassword '7.....'
        }
     }
     buildTypes {

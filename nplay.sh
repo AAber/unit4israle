@@ -37,7 +37,7 @@ if [ $? -ne 0 ]; then
     exit 1
 fi
 
-cp build/app/outputs/bundle/release/app-release.aab ~/meir-appbundle/app-release-$next_tag.aab
+cp build/app/outputs/bundle/release/app-release.aab ~/os-appbundle/app-release-$next_tag.aab
 
 rm play/upload-keystore.jks
 rm android/app/key.properties
@@ -53,29 +53,3 @@ else
 	echo Error mmm...
 	exit 1
 fi
-
-
-#Play webUI Production new release, upload app-release-x.y.z+12.aab
-#Next
-#This App Bundle contains native code, and you've not uploaded debug symbols. We recommend you upload a symbol file to make your crashes and ANRs easier to analyze and debug. Learn More = Ignore.
-# Save
-# Go to overview
-# Send 1 change fo review
-# Send changes to review
-
-# App bundle explorer
-
-
-# # Data flow
-# pd2sqlite
-# check_links
-# series_new
-
-
-# # Android splash
-# cd android
-# cp /Users/ubuntu/splash.png /Users/ubuntu/meirb/android/app/src/main/res/mipmap-mdpi/launcher_icon.png
-# cp /Users/ubuntu/splash.png /Users/ubuntu/meirb/android/app/src/main/res/mipmap-hdpi/launcher_icon.png
-# cp /Users/ubuntu/splash.png /Users/ubuntu/meirb/android/app/src/main/res/mipmap-xxxhdpi/launcher_icon.png
-# cp /Users/ubuntu/splash.png /Users/ubuntu/meirb/android/app/src/main/res/mipmap-xxhdpi/launcher_icon.png
-# cp /Users/ubuntu/splash.png /Users/ubuntu/meirb/android/app/src/main/res/mipmap-xhdpi/launcher_icon.png

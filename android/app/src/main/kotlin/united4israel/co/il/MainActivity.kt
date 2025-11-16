@@ -1,4 +1,4 @@
-package il.co.united4israle
+package united4israle.co.il
 
 import io.flutter.embedding.android.FlutterActivity
 

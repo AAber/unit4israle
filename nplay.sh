@@ -3,7 +3,7 @@
 
 #Build aab
 # 1.4.5+25
-current_tag="0.0.0+1"
+current_tag="0.0.1+1"
 next_tag="0.0.1+1"
 FLUTTER_BUILD_NAME="0.0.1"
 NEW_FLUTTER_BUILD_NAME="0.0.1"

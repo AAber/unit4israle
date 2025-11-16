@@ -3,10 +3,10 @@
 
 #Build aab
 # 1.4.5+25
-current_tag="1.9.2+31"
-next_tag="1.9.3+32"
-FLUTTER_BUILD_NAME="1.9.31"
-NEW_FLUTTER_BUILD_NAME="1.9.32"
+current_tag="0.0.0+1"
+next_tag="0.0.1+1"
+FLUTTER_BUILD_NAME="0.0.0"
+NEW_FLUTTER_BUILD_NAME="0.0.1"
 
 sed -i '' "s/$current_tag/$next_tag/" pubspec.yaml
 next_tag=$(cat pubspec.yaml | grep version: | awk '{print $2}')

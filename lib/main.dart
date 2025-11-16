@@ -358,8 +358,27 @@ class _HomePageState extends State<HomePage> {
                           ),
                           const SizedBox(height: 20),
                           ElevatedButton(
-                            onPressed: () {
-                              // Add contact/join functionality
+                            onPressed: () async {
+                              final Uri emailUri = Uri(
+                                scheme: 'mailto',
+                                path: 'banzashi@gmail.com',
+                                query: 'subject=צרו קשר',
+                              );
+                              try {
+                                await launchUrl(
+                                  emailUri,
+                                  mode: LaunchMode.externalApplication,
+                                );
+                              } catch (e) {
+                                // Handle error if email app is not available
+                                if (context.mounted) {
+                                  ScaffoldMessenger.of(context).showSnackBar(
+                                    const SnackBar(
+                                      content: Text('לא ניתן לפתוח את אפליקציית האימייל'),
+                                    ),
+                                  );
+                                }
+                              }
                             },
                             style: ElevatedButton.styleFrom(
                               backgroundColor: Colors.white,
